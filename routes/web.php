@@ -18,5 +18,5 @@ $app->group(['prefix' => 'api/library', 'namespace' => 'App\Http\Controllers\Lib
 });
 
 $app->group(['prefix' => 'api', 'namespace' => 'App\Http\Controllers\BinaryTree'], function () use ($app) {
-    $app->get('findSmallestLeaf', ['as' => 'find-smallest-leaf', 'uses' => 'BinaryTreeController@smallestLeft']);
+    $app->get('findSmallestLeaf', ['as' => 'find-smallest-leaf', 'uses' => 'BinaryTreeController@findMin']);
 });
