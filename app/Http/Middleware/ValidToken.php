@@ -17,7 +17,7 @@ class ValidToken
     public function handle($request, Closure $next)
     {
         if ($request->header('x-valid-user') !== env('API_TOKEN')) {
-            return Response::create('', 401);
+            return response('', 401);
         }
         return $next($request);
     }
