@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\BinaryTree;
 
 use App\Http\Controllers\Controller;
+use App\Models\BinaryTree\BinaryTree;
+use App\Models\BinaryTree\BinaryTreeIterator;
 use Illuminate\Support\Facades\Storage;
 
 class BinaryTreeController extends Controller
@@ -15,8 +17,8 @@ class BinaryTreeController extends Controller
         $data = Storage::disk('fixtures')->get('sample-tree.json');
         $nodes = json_decode($data, true);
 
-        // in-order traversal FTW!
-        $stack = collect($nodes)->flatten()->all();
-        return min($stack);
+        $tree = BinaryTree::create($nodes);
+        $min = $tree->findSmallestLeaf();
+        return response($min);
     }
 }

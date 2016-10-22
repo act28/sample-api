@@ -1,0 +1,18 @@
+{
+  "root": 2,
+  "left": {
+    "root": 7,
+    "left": {
+      "root": 4
+    }
+  },
+  "right": {
+    "root": 1,
+    "left": {
+      "root": 9
+    },
+    "right": {
+      "root": 5
+    }
+  }
+}
