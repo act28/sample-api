@@ -16,6 +16,8 @@ To start the virtual machine, run `vagrant up` from the command line.
 
 When the VM has successfully started, ssh into the box using `vagrant ssh`.
 
+Run `composer install` to install the required Compoer dependencies.
+
 Then enter the following commands to install the database.
  
 ```sh
@@ -81,7 +83,7 @@ To run the unit tests, ssh into the vagrant box and enter:
 
 ```sh
 $ cd sample-api
-$ vendor/bin/phpunit tests
+$ php vendor/bin/phpunit tests
 ```
 
 ## Additional Information
