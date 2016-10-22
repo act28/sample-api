@@ -17,3 +17,13 @@ $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
         'email' => $faker->email,
     ];
 });
+
+$factory->define(App\Models\Library\Library::class, function (Faker\Generator $faker) {
+    return [
+        'id' => $faker->randomNumber(5, true),
+        'code' => strtoupper(str_repeat($faker->randomLetter, 3)) . $faker->randomNumber(3, true),
+        'name' => $faker->words(3, true),
+        'abbr' => strtoupper(str_repeat($faker->randomLetter, 3)),
+        'url' => $faker->url,
+    ];
+});
