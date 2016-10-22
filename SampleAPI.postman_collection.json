@@ -1,0 +1,64 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sample API",
+		"_postman_id": "7176dbc1-3a76-0ad5-8a12-aef9579c1be0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Library",
+			"request": {
+				"url": "http://homestead.app/api/library",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-VALID-USER",
+						"value": "344b54c7-01b1-4fad-9003-d1572e4794c3",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\":   10123, \n  \"code\": \"ARC100\", \n  \"name\": \"Architecture / Music Library\", \n  \"abbr\": \"Arch Music\", \n  \"url\": \"http://www.library.uq.edu.au/locations/architecture-music-library\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show Library",
+			"request": {
+				"url": "http://homestead.app/api/library/10834",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Find Smallest Leaf",
+			"request": {
+				"url": "http://homestead.app/api/findSmallestLeaf",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
