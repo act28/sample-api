@@ -3,7 +3,6 @@
 namespace App\Tests;
 
 use App\Models\BinaryTree\BinaryTree;
-use App\Models\BinaryTree\BinaryTreeIterator;
 use Illuminate\Support\Facades\Storage;
 use TestCase;
 

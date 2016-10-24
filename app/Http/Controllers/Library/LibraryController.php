@@ -20,7 +20,7 @@ class LibraryController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'id' => 'required|integer|unique:libraries',
+            'id' => 'required|integer|min:1|unique:libraries',
             'code' => 'required|regex:/[A-Z]{3}\d{3}/|unique:libraries',
             'name' => 'required',
             'abbr' => 'required',

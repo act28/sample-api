@@ -4,7 +4,6 @@ namespace App\Http\Controllers\BinaryTree;
 
 use App\Http\Controllers\Controller;
 use App\Models\BinaryTree\BinaryTree;
-use App\Models\BinaryTree\BinaryTreeIterator;
 use Illuminate\Support\Facades\Storage;
 
 class BinaryTreeController extends Controller
